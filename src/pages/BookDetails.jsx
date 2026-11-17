@@ -15,7 +15,9 @@ function BookDetails() {
     setLoading(true);
     getBooks()
       .then((books) => {
-        const foundBook = books.find((b) => b.id === Number(id));
+        console.log("All Books data:", books); 
+        console.log("ID from URL:", id, "Type:", typeof id); 
+        const foundBook = books.find((b) =>String(b.id) === String(id));
         setBook(foundBook || null);
       })
       .catch(() => setBook(null))
