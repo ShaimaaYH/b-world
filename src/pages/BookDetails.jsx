@@ -15,7 +15,7 @@ function BookDetails() {
     setLoading(true);
     getBooks()
       .then((books) => {
-        const foundBook = books.find((b) => b.id === id);
+        const foundBook = books.find((b) => b.id === Number(id));
         setBook(foundBook || null);
       })
       .catch(() => setBook(null))
