@@ -1,5 +1,5 @@
 import BookCover from "./BookCover";
-import { getBook } from "../api/books";
+
 
 
 function Hero({ book }) {
